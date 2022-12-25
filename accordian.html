@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .accordian {
+        width: 500px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .item {
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .ques {
+        font-weight: 600;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+      .hidden {
+        display: none;
+      }
+      .open .hidden {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordian">
+      <div class="item open">
+        <p class="ques">Q1. Abcdefghijklm</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <p class="hidden">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          nisi eum molestias, esse dolorum expedita earum laborum odit aut,
+          explicabo ipsa magnam laboriosam necessitatibus vitae neque debitis
+          dolores vel! Omnis.
+        </p>
+      </div>
+      <div class="item">
+        <p class="ques">Q2. Abcdefghijklm</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <p class="hidden">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          nisi eum molestias, esse dolorum expedita earum laborum odit aut,
+          explicabo ipsa magnam laboriosam necessitatibus vitae neque debitis
+          dolores vel! Omnis.
+        </p>
+      </div>
+      <div class="item">
+        <p class="ques">Q3. Abcdefghijklm</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <p class="hidden">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          nisi eum molestias, esse dolorum expedita earum laborum odit aut,
+          explicabo ipsa magnam laboriosam necessitatibus vitae neque debitis
+          dolores vel! Omnis.
+        </p>
+      </div>
+    </div>
+    <script>
+      var items = document.querySelectorAll(".item");
+
+      [...items].forEach((item) => {
+        item.addEventListener("click", function () {
+          item.classList.toggle("open");
+        });
+      });
+    </script>
+  </body>
+</html>

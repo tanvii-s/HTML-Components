@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .carousel {
+        background-color: pink;
+        width: 80%;
+        margin: 100px auto;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        position: relative;
+      }
+      img {
+        width: 150px;
+      }
+      button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 0;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+      }
+      .left {
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+      .right {
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="./photo.jfif" />
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem
+        officia, quod, eaque nulla porro minima recusandae exercitationem
+        corporis accusamus sed. Veritatis quisquam at quod consequatur ratione
+        cumque aut rem!
+      </p>
+      <button class="left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

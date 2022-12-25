@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .pagination {
+        font-size: 20px;
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      button,
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        height: 42px;
+        width: 42px;
+        border: 1px solid green;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      }
+      a {
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+        color: green;
+      }
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: green;
+      }
+      span {
+        display: block;
+      }
+
+      button:hover {
+        background-color: green;
+        border: 1px solid #fff;
+      }
+      button:hover .btn-icon {
+        stroke: #fff;
+      }
+      a:link,
+      a:visited {
+        background-color: #fff;
+      }
+      a:hover,
+      a:active {
+        background-color: green;
+        color: #fff;
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagination">
+      <button class="left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3 </a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <span>...</span>
+      <a href="#">23</a>
+      <button class="right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

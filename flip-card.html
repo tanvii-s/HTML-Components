@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .container {
+        width: 30rem;
+        height: 30rem;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.2s;
+      }
+      .card.isflipped {
+        transform: rotateY(180deg);
+      }
+      .card--front,
+      .card--back {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+      .card--front {
+        background-color: rgba(0, 0, 100, 0.1);
+      }
+      .card--back {
+        background-color: rgba(100, 0, 0, 0.1);
+        transform: rotateY(180deg);
+      }
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card--front">
+          <h2>Hi!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            alias obcaecati sunt maxime laboriosam commodi iste molestias minima
+            libero reprehenderit explicabo nam ullam doloremque autem, fugiat
+            quod dicta sint quis.
+          </p>
+        </div>
+        <div class="card--back">
+          <h2>Hi!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            alias obcaecati sunt maxime laboriosam commodi iste molestias minima
+            libero reprehenderit explicabo nam ullam doloremque autem, fugiat
+            quod dicta sint quis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="card--front">
+          <h2>Hi!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            alias obcaecati sunt maxime laboriosam commodi iste molestias minima
+            libero reprehenderit explicabo nam ullam doloremque autem, fugiat
+            quod dicta sint quis.
+          </p>
+        </div>
+        <div class="card--back">
+          <h2>Hi!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            alias obcaecati sunt maxime laboriosam commodi iste molestias minima
+            libero reprehenderit explicabo nam ullam doloremque autem, fugiat
+            quod dicta sint quis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var cards = document.querySelectorAll(".card");
+
+      [...cards].forEach((card) => {
+        card.addEventListener("click", function () {
+          card.classList.toggle("isflipped");
+        });
+      });
+    </script>
+  </body>
+</html>
