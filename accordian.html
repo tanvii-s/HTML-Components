@@ -11,20 +11,25 @@
         padding: 0;
         box-sizing: border-box;
       }
+      html {
+        font-size: 62.5%;
+      }
       .accordian {
-        width: 500px;
-        margin: 50px auto;
+        width: 50rem;
+        margin: 5rem auto;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 2rem;
       }
       .item {
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 1.6rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: center;
-        gap: 10px;
+        gap: 1rem;
         cursor: pointer;
         user-select: none;
       }
@@ -32,11 +37,13 @@
         font-weight: 600;
       }
       .icon {
-        width: 24px;
-        height: 24px;
+        width: 2.4rem;
+        height: 2.4rem;
       }
       .hidden {
         display: none;
+        margin-top: 1rem;
+        text-align: justify;
       }
       .open .hidden {
         display: block;
@@ -45,7 +52,7 @@
   </head>
   <body>
     <div class="accordian">
-      <div class="item open">
+      <div class="item">
         <p class="ques">Q1. Abcdefghijklm</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
